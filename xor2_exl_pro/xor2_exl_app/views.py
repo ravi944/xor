@@ -27,7 +27,7 @@ def simple_upload(request):
         dataset = Dataset()
         new_persons = request.FILES['myfile']
 
-        imported_data = dataset.load(new_persons.read(), format='xls')
+        imported_data = dataset.load(new_persons.read())
         # print(imported_data)
         for data in imported_data:
             print(data[1])
