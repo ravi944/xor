@@ -22,6 +22,10 @@ def export(request):
 
 
 def simple_upload(request):
+    
+    ### FIRST METHOD
+    
+    
     if request.method == 'POST':
         person_resource = PersonResource()
         dataset = Dataset()
@@ -45,5 +49,20 @@ def simple_upload(request):
 
         if not result.has_errors():
            person_resource.import_data(dataset, dry_run=False)  # Actually import now
+        
+        
+        
+        
+       ###SECOND METHOD
+    
+#     import pandas as pd
+#     from sqlalchemy import create_engine
+    
+#     engin = create_engine('mysql://root:1234@localhost/ravi')
+#     if request.method == 'POST':
+#         loc = request.FILES['myfile']
+     
+#         df = pd.read_excel(str(loc))
+#         df.to_sql('people12',con=engin,if_exists='append')
 
     return render(request, 'input.html')
