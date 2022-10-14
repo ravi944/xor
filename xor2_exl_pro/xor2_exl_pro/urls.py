@@ -18,6 +18,6 @@ from django.urls import path
 from xor2_exl_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('export/', views.export),
-    path('', views.simple_upload),
+#     path('export/', views.export),
+    path('', views.index),
 ]
