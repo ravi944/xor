@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'xor2_exl_pro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'xor2_exl_db',
+        'NAME': 'xor2_db',
         'USER': 'root',
         'PASSWORD': '1234',
         'HOST': '127.0.0.1',
